@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>albumName</key>
+	<string>Love Is Dead</string>
+	<key>artistName</key>
+	<string>CHVRCHES</string>
+	<key>artworkURL</key>
+	<string>NA</string>
+	<key>coverURL</key>
+	<string>http://i.scdn.co/image/159e339c6cd980e4787e7d464079d822b19425be</string>
+	<key>currentPosition</key>
+	<string>177</string>
+	<key>isAd</key>
+	<string>false</string>
+	<key>isLoved</key>
+	<string>false</string>
+	<key>oldFilename</key>
+	<string>NA</string>
+	<key>songChanged</key>
+	<string>false</string>
+	<key>songDuration</key>
+	<string>263</string>
+	<key>songName</key>
+	<string>Never Say Die</string>
+	<key>soundVolume</key>
+	<string>64</string>
+</dict>
+</plist>

@@ -1,0 +1,10 @@
+{
+  "dest": "./",
+  "log": "info",
+  "mode": {
+    "symbol": {
+      "dest": "",
+      "sprite": "sprite.svg"
+    }
+  }
+}

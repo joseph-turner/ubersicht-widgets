@@ -1,0 +1,21 @@
+// usage:
+// node get-weather.js [lat] [long]
+
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
+const http = require('http'),
+    lat = process.argv[2],
+    long = process.argv[3];
+
+function getWeather(lat, long) {
+  http.get(url, function(res) {
+    res.on('data', function(data) {
+      console.log(data);
+    });
+    console.log('here')
+  });
+}
+
+console.log('here')
+
+getWeather(lat, long);
