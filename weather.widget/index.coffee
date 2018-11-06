@@ -18,7 +18,6 @@ command: (callback) ->
     if localStorage.getItem('day') is today
       if count < 900
         localStorage.setItem('count', parseInt(count) + 1)
-        console.log('Count: ', count)
       else
         return
     else
@@ -28,7 +27,6 @@ command: (callback) ->
     $.ajax({
       url: 'http://127.0.0.1:41417/https://api.darksky.net/forecast/98b57de0bbdb70a6e461a1eab2e7b33a/' + lat + ',' + long,
       success: (data) ->
-        console.log('Dark Sky', data)
         callback null, data
       error: (error) ->
         console.error(error)
@@ -50,8 +48,8 @@ update: (output, elem) ->
     @renderAlerts output.alerts
 
   currently = output.currently
-  currently.hourlySummary = output.hourly.summary
-  currently.minutelySummary = output.minutely.summary
+  currently.hourlySummary = output.hourly?.summary
+  currently.minutelySummary = output.minutely?.summary
 
   @renderCurrent currently
   @renderForecast output.daily
@@ -65,7 +63,7 @@ renderAlerts: (data) ->
   @renderAlert i, $alerts for i in data
 
 renderAlert: (data, elem) ->
-  console.log 'Alert', data
+  # console.log 'Alert', data
   regions = data.regions.join(', ')
   expiration = moment.unix(data.expires).format('ddd, MMM DD [at] hh:mm')
 
@@ -104,7 +102,7 @@ renderForecast: (data) ->
   $forecast.find('.forecast__summary').text(data.summary)
   $('.forecast__daily').empty()
 
-  # @renderMoon data.data[0].moonPhase
+  @renderMoon data.data[0].moonPhase
 
   @renderSun data.data[0]
   @renderDaily data for data in data.data[0..4]
@@ -121,7 +119,7 @@ renderDaily: (data) ->
   @renderSVG data.icon, "##{dayName} use", true
 
 renderMoon: (data) ->
-  console.log 'Moon', data
+  # console.log 'Moon', data
   switch
     when data == 0
       moonPhase = 'moon-new'
@@ -145,7 +143,7 @@ renderMoon: (data) ->
 renderSun: (data) ->
   sunriseTime = moment.unix(data.sunriseTime).format('hh:mm')
   sunsetTime = moment.unix(data.sunsetTime).format('hh:mm')
-  console.log 'Sun', sunriseTime, sunsetTime
+  # console.log 'Sun', sunriseTime, sunsetTime
 
   # debugger
   $('.sunrise__time').text(sunriseTime)
@@ -296,10 +294,10 @@ style: """
 
     &__moon
       position absolute
-      top 15px
-      right 15px
-      width 20px
-      height 20px
+      top 30px
+      right 40px
+      width 40px
+      height 40px
 
     &__icon
       display inline-block
@@ -336,8 +334,8 @@ style: """
 
   .sun-times
     position absolute
-    top 15px
-    left 30px
+    top 5px
+    left 5px
     margin 0
     padding 0
     list-style none
@@ -347,8 +345,8 @@ style: """
       font-size 12px
 
       &__icon
-        width 30px
-        height 30px
+        width 25px
+        height 25px
         margin 0 auto
 
     .sunrise

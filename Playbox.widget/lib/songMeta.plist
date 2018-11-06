@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>albumName</key>
-	<string>Love Is Dead</string>
+	<string>Mis Planes Son Amarte</string>
 	<key>artistName</key>
-	<string>CHVRCHES</string>
+	<string>Juanes</string>
 	<key>artworkURL</key>
 	<string>NA</string>
 	<key>coverURL</key>
-	<string>http://i.scdn.co/image/159e339c6cd980e4787e7d464079d822b19425be</string>
+	<string>http://i.scdn.co/image/482087103b5262247d387931eb49727451ec56b9</string>
 	<key>currentPosition</key>
-	<string>177</string>
+	<string>124</string>
 	<key>isAd</key>
 	<string>false</string>
 	<key>isLoved</key>
@@ -21,10 +21,10 @@
 	<key>songChanged</key>
 	<string>false</string>
 	<key>songDuration</key>
-	<string>263</string>
+	<string>196</string>
 	<key>songName</key>
-	<string>Never Say Die</string>
+	<string>Perro Viejo</string>
 	<key>soundVolume</key>
-	<string>64</string>
+	<string>100</string>
 </dict>
 </plist>
