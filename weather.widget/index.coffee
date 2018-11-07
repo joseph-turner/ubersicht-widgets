@@ -233,7 +233,7 @@ style: """
     display none
     padding 10px 15px 15px
     background rgba(black, .3)
-    -webkit-backdrop-filter blur(5px) contrast(100%) saturate(140%)
+    -webkit-backdrop-filter blur(5px)
     border-radius 5px
 
   // ====================================
