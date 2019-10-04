@@ -42,7 +42,7 @@ style: """
   bgColor1 = rgba(bgColor,1.0)
   bgColor08 = rgba(bgColor,0.7)
   bgColor05 = rgba(bgColor,0.5)
-  bgColor03 = rgba(bgColor,.3)
+  bgColor03 = rgba(bgColor,.4)
   blurProperties = blur(5px) contrast(100%) saturate(140%)
 
   // Next, let's sort out positioning.
@@ -87,7 +87,7 @@ style: """
   background-color bgColor03
   font-family system, -apple-system, "Helvetica Neue"
   border none
-  -webkit-backdrop-filter blurProperties
+  // -webkit-backdrop-filter blurProperties
   z-index 10
 
   .wrapper

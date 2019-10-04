@@ -1,5 +1,5 @@
 {
-  "name": "weather.widget",
+  "name": "desktop-weather",
   "version": "1.0.0",
   "description": "An Ubersicht weather widget",
   "main": "index.coffee",

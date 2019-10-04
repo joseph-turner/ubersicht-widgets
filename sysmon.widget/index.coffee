@@ -69,12 +69,12 @@ style: """
   bottom 10px
   left 10px
   padding 10px
-  background rgba(0,0,0,.3)
+  background rgba(0,0,0,.4)
   color: #fff
   font-family "Helvetica Neue"
   font-weight 200
   line-height 1
-  -webkit-backdrop-filter blur(5px)
+  // -webkit-backdrop-filter blur(5px)
   border-radius 5px
 
   p
@@ -117,11 +117,11 @@ style: """
   .cpu
     td
       width 140px
-  
+
   .ram
     td
       width 120px
-  
+
   .mem
     width 130px
 
@@ -227,7 +227,7 @@ mem: () ->
 
   renderProcess = (mem, name) ->
     "<td>#{name}</td><td>#{mem}</td>"
-  
+
   @run command, (err, output) ->
     processes = output.split('\n')
     for process, i in processes
@@ -246,15 +246,15 @@ update: (output, domEl) ->
 
   if @netstatTime <= now - 2000
     @netstat()
-  
+
   if @batteryTime <= now - 60000
     @battery()
-  
+
   if @cpuTime <= now - 5000
     @cpu()
-  
+
   if @ramTime <= now - 5000
     @ram()
-  
+
   if @memTime <= now - 5000
     @mem()
