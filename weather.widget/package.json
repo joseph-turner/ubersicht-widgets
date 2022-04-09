@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "moment": "2.22.1"
+    "moment": "2.29.2"
   },
   "devDependencies": {
     "svg-sprite": "1.4.0"
